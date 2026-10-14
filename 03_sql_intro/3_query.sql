@@ -1,0 +1,26 @@
+SET PAGESIZE 20
+
+SELECT * FROM jokes;
+
+DESC system.jokes; 
+
+SELECT
+    category,
+    rating,
+    joke
+FROM jokes
+WHERE rating > 5
+ORDER BY rating DESC, category
+FETCH FIRST 5 ROWS ONLY
+
+--1 find all jokes that have rating 6-8
+--2 filter out all DBA jokes
+--3 filter out all DBA and LINUX jokes with rating over 6
+
+--WHERE rating BETWEEN 6 AND 8
+
+;
+
+
+
+EXIT
